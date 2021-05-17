@@ -48,9 +48,9 @@ def check_availability():
     if availability==True:
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.starttls()
-        s.login("iamnavneet619@gmail.com", "2alpha>3beta")
+        s.login(SENDER_EMAIL, SENDER_PASSWORD)
         receivers = ["navneetsinghsajwan@gmail.com","imankitsajwan@gmail.com"]
-        s.sendmail("iamnavneet619@gmail.com", receivers, "Vaccine Available")
+        s.sendmail(SENDER_EMAIL, receivers, "Vaccine Available")
         s.quit()
 
 def test():
